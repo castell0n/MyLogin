@@ -1,0 +1,161 @@
+*{
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body {
+    background: #f0f8ff;
+}
+
+.contenRegistro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    padding: 1rem;
+}
+.contenRegistro .alertSesion {
+    padding: 0.5rem;
+    border-radius: 4px 4px 0 0;
+    text-align: center;
+    color: #ffffff;
+    animation: 3s;
+    background: #000000;
+    z-index: 999;
+    width: 18rem;
+    height: 3rem;
+    line-height: 2rem;
+}
+
+
+.contenRegistro .contenDatos {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 18rem;
+    background: #00000090;
+    border: 2px solid #00000090;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    overflow: hidden;
+    padding: 1.4rem;
+}
+
+.contenRegistro .contenDatos .textLogin {
+    font-size: 20px;
+    padding: 0 2rem;
+    width: 100%;
+    height: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    color: #ffffff;
+}
+
+.contenRegistro .contenDatos .contenInpus {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.contenRegistro .contenDatos .contenInpus .labelEmail, .labelPassword {
+    background: #000000;
+    color: #ffffff;
+    width: 100%;
+    text-align: center;
+    line-height: 2rem;
+    height: 2rem;
+    border: 1px solid #000000;
+    border-bottom: none;
+    margin-top: 1.4rem;
+    border-radius: 4px 4px 0 0;
+}
+
+.contenRegistro .contenDatos .contenInpus .inputEmail, .inputPassword {
+    background: #00000090;
+    color: #ffffff;
+    width: 100%;
+    text-align: center;
+    transition: .4s;
+    height: 2rem;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+}
+.contenRegistro .contenDatos .contenInpus .inputEmail:focus, .inputPassword:focus {
+    background: #000000;
+    color: #ffffff;
+    outline: none;
+}
+
+.contenRegistro .contenBtn {
+    display: grid;
+    grid-template-columns: 70% 25%;
+    grid-template-rows: 100%;
+    margin: 1rem;
+    gap: 0.8rem;
+    width: 100%;
+    height: 2rem;
+}
+.contenRegistro .contenBtnInicio {
+    display: none;
+}
+.contenRegistro .contenBtn .btnRegistro, .btnInicio, .IrInicio, .IrRegistro {
+    border-radius: 4px;
+    background: #000000;
+    transition: .4s;
+    color: #ffffff;
+    cursor: pointer;
+}
+.contenRegistro .contenBtn .btnRegistro:hover, .btnInicio:hover, .IrInicio:hover, .IrRegistro:hover {
+    background: #00000090;
+    color: #ffffff;
+}
+.contenRegistro .contenBtn .btnInicio {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+.contenRegistro .contenBtn .IrRegistro {
+    grid-column: 2 / 2;
+    grid-row: 1 / 2;
+}
+
+
+
+
+.contenRegistro .contenDatos .stado {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    top: 1rem;
+    right: 1rem;
+}
+.userDesactivado {
+    background:red;
+    box-shadow: 0 0 10px 0 red;
+    animation: stado .8s infinite;
+}
+.userActivo {
+    background:#00ff14;
+    box-shadow: 0 0 10px 0#00ff14;
+    animation: stado .8s infinite;
+}
+@keyframes stado {
+    0% {
+        opacity: 50%;
+    }
+    50% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 50%;
+    }
+}
+/* stylos de los contenedores de registro */

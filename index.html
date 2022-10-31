@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="asset/css/index.css">
+</head>
+<body>
+
+
+    <main class="contenRegistro">
+    <!-- area para las alertas -->
+        <div id="alertSesion" class="alertSesion">
+            <h4 id="nombreUser" class="nombreUser"></h4>
+        </div>
+    <!-- area para las alertas -->
+
+        <section class="contenDatos">
+            <h4 class="textLogin">Acceso</h4>
+            <span class="stado userDesactivado"></span>
+            <form id="form" class="contenInpus" method="post" novalidate>
+                <label for="inputEmail" class="labelEmail">Correo electronico</label>
+                <input type="email" name="inputEmail" class="inputEmail" id="inputEmail" placeholder="Correo" required>
+                <span class="error" aria-live="polite"></span>
+
+                
+                <label for="inputPassword" class="labelPassword">Contraseña</label>
+                <input type="password" name="inputPassword" class="inputPassword" id="inputPassword" placeholder="Contraseña" autocomplete="on" required>
+            </form>
+
+            <div class="contenBtn contenBtnRegistro">
+                <button type="submit" class="btnRegistro">Registro</button>
+                <button class="IrInicio">Inicio</button>
+            </div>
+
+            <div class="contenBtn contenBtnInicio">
+                <button class="IrRegistro">Registro</button>
+                <button type="submit" class="btnInicio">Inicio</button>
+            </div>
+        </section>
+    </main>
+
+    
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="asset/js/apikey.js"></script>
+    <script src="asset/js/index.js"></script>
+</body>
+</html>
